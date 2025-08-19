@@ -65,7 +65,7 @@ const tartuffo = localFont({
       style: "italic",
     },
   ],
-  variable: "--font-tartuffo", // note: usually use kebab-case
+  variable: "--font-tartuffo",
 });
 
 
