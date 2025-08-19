@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ParallaxImgTwo() {
   const handleLoaded = () => {
-    ScrollTrigger.refresh(); // ✅ works directly, no TS error
+    ScrollTrigger.refresh();
   };
 
   return (

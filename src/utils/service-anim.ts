@@ -1,5 +1,5 @@
-
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 
@@ -43,6 +43,8 @@ export const serviceAnimation = () => {
 
 
 export const serviceAnimationTwo = (): void => {
+
+  gsap.registerPlugin(ScrollTrigger);
   const section = document.querySelector(".service-area-4");
   if (!section) return;
 
