@@ -2,7 +2,6 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { fadeAnimation } from "@/utils/title-anim";
-import { serviceAnimationTwo } from "@/utils/service-anim";
 import { clientPinAnimation } from "@/utils/pin-anim";
 import { aboutThreeThumbAnimation, thumbAnimation } from "@/utils/img-anim";
 import { CustomEase, ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
@@ -19,7 +18,6 @@ export default function DesignAgencyWrapper({ children }: Props) {
       clientPinAnimation();
       aboutThreeThumbAnimation();
       thumbAnimation();
-      serviceAnimationTwo();
     }, 100);
     return () => clearTimeout(timer);
   }, {});

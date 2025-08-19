@@ -1,9 +1,12 @@
 "use client";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function ContactArea() {
   const [budget, setBudget] = useState("");
 
+  const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
   return (
     <section className="contact-area-contact-page">
       <div className="container large">
@@ -45,7 +48,7 @@ export default function ContactArea() {
               </div>
             </div>
             <div className="contact-wrap">
-              <form id="contact__form" method="POST" action="./mail.php">
+              <form onSubmit={handleSubmit} id="contact__form">
                 <div className="contact-formwrap">
                   <div className="contact-formfield">
                     <input
