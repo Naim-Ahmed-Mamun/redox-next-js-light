@@ -13,15 +13,29 @@ type Props = {
 
 export default function DesignAgencyWrapper({ children }: Props) {
   gsap.registerPlugin(CustomEase, ScrollToPlugin, SplitText, ScrollTrigger);
+  // useGSAP(() => {
+  //   const timer = setTimeout(() => {
+  //     fadeAnimation();
+  //     clientPinAnimation();
+  //     aboutThreeThumbAnimation();
+  //     serviceAnimationTwo();
+  //     thumbAnimation();
+  //   }, 100);
+  //   return () => clearTimeout(timer);
+  // }, {});
   useGSAP(() => {
     const timer = setTimeout(() => {
-      fadeAnimation();
+      // fadeAnimation();
       clientPinAnimation();
       aboutThreeThumbAnimation();
       serviceAnimationTwo();
       thumbAnimation();
-    }, 50);
+
+      // force recalculation of ScrollTrigger positions
+      ScrollTrigger.refresh();
+    }, 300); // give layout more time
     return () => clearTimeout(timer);
   }, {});
+
   return children;
 }
