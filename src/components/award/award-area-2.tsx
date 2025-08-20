@@ -62,7 +62,7 @@ const AwardAreaTwo = () => {
           <div className="featured-work-wrapper-box">
             <div className="featured-work-wrapper-2">
               {featuredWorks.map((work, index) => (
-                <div className={`featured-work-box ${featuredWorks.length != -1 ? 'fade-anim':''}`} key={index}>
+                <div className={`featured-work-box ${featuredWorks.length != -1 ? '':''}`} key={index}>
                   <div className={`thumb ${work.marginTop ? "mt--150" : ""}`}>
                     <span></span>
                     <div
