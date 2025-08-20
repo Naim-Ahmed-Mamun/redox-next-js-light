@@ -16,9 +16,9 @@ export default function ModernAgencyWrapper({ children }: Props) {
 
   useGSAP(() => {
     const container = document.body;
+    charAnimation();
     imagesLoaded(container, { background: true }, () => {
       fadeAnimation();
-      charAnimation();
       scaleAnim();
     });
   }, {});
