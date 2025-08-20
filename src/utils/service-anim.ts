@@ -45,41 +45,68 @@ export const serviceAnimationTwo = (): void => {
   const section = document.querySelector(".service-area-4");
   if (!section) return;
 
+  // Helper to wait for all images in the section to load
+  const waitForImages = (container: HTMLElement, cb: () => void) => {
+    const images = Array.from(container.querySelectorAll('img')) as HTMLImageElement[];
+    if (images.length === 0) {
+      cb();
+      return;
+    }
+    let loaded = 0;
+    images.forEach(img => {
+      if (img.complete) {
+        loaded++;
+        if (loaded === images.length) cb();
+      } else {
+        img.addEventListener('load', () => {
+          loaded++;
+          if (loaded === images.length) cb();
+        });
+        img.addEventListener('error', () => {
+          loaded++;
+          if (loaded === images.length) cb();
+        });
+      }
+    });
+  };
+
   const mm = gsap.matchMedia();
 
-  mm.add("(min-width: 1024px)", () => {
-    const races = document.querySelector(".service-area-4") as HTMLElement | null;
-    if (!races) return;
+  waitForImages(section as HTMLElement, () => {
+    mm.add("(min-width: 1024px)", () => {
+      const races = document.querySelector(".service-area-4") as HTMLElement | null;
+      if (!races) return;
 
-    const racesScrollWidth: number = races.scrollWidth;
-    const containerWidth: number = races.offsetWidth;
+      const racesScrollWidth: number = races.scrollWidth;
+      const containerWidth: number = races.offsetWidth;
 
-    const getScrollAmount = (): number => -(racesScrollWidth - containerWidth);
+      const getScrollAmount = (): number => -(racesScrollWidth - containerWidth);
 
-    const wrapperTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: races,
-        start: "top top",
-        end: `+=${Math.abs(getScrollAmount())}`,
-        scrub: 3,
-        pin: true,
-      },
+      const wrapperTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: races,
+          start: "bottom bottom", // Pin starts when section bottom hits viewport bottom
+          end: `+=${Math.abs(getScrollAmount())}`,
+          scrub: 3,
+          pin: true,
+        },
+      });
+
+      wrapperTimeline.to(".services-wrapper-4", {
+        x: getScrollAmount(),
+        delay: 0.05,
+        ease: "power1.inOut",
+      });
+
+      wrapperTimeline.to(
+        ".service-thumb-line-wrapper span",
+        {
+          scaleX: 0,
+          stagger: 0.04,
+          ease: "power1.out",
+        },
+        "<"
+      );
     });
-
-    wrapperTimeline.to(".services-wrapper-4", {
-      x: getScrollAmount(),
-      delay: 0.05,
-      ease: "power1.inOut",
-    });
-
-    wrapperTimeline.to(
-      ".service-thumb-line-wrapper span",
-      {
-        scaleX: 0,
-        stagger: 0.04,
-        ease: "power1.out",
-      },
-      "<"
-    );
   });
 };
