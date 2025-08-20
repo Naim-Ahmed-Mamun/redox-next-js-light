@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { charAnimation, fadeAnimation } from "@/utils/title-anim";
 import { scaleAnim } from "@/utils/img-anim";
-import { CustomEase, ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
+import { CustomEase,SplitText } from "gsap/all";
 
 type Props = {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ type Props = {
 
 export default function ModernAgencyWrapper({ children }: Props) {
   useGSAP(() => {
-    gsap.registerPlugin(CustomEase, ScrollToPlugin, SplitText, ScrollTrigger);
+    gsap.registerPlugin(CustomEase, SplitText);
     const timer = setTimeout(() => {
       fadeAnimation();
       charAnimation();

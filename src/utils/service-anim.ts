@@ -41,7 +41,7 @@ export const serviceAnimation = () => {
 }
 
 
-export const serviceAnimationTwo = (): void => {
+export const serviceAnimationTwo = () => {
   const section = document.querySelector(".service-area-4");
   if (!section) return;
     

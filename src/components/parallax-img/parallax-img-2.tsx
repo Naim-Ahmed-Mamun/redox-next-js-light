@@ -2,12 +2,11 @@
 import Image from "next/image";
 import gallery_img from "@/assets/imgs/gallery/image-52.webp";
 import gsap from "gsap";
-import CustomEase from "gsap/CustomEase";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 export default function ParallaxImgTwo() {
-  gsap.registerPlugin(ScrollTrigger,CustomEase);
+  gsap.registerPlugin(ScrollTrigger);
   const handleLoaded = () => {
     ScrollTrigger.refresh();
   };
