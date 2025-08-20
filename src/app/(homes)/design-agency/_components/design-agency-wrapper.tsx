@@ -51,12 +51,12 @@ export default function DesignAgencyWrapper({ children }: Props) {
   useGSAP(() => {
     const container = document.body;
 
+    fadeAnimation();
+    thumbAnimation();
     imagesLoaded(container, { background: true }, () => {
       // run animations after images loaded
-      fadeAnimation();
       clientPinAnimation();
       aboutThreeThumbAnimation();
-      thumbAnimation();
       serviceAnimationTwo();
       rrBtnAnimation();
     });
