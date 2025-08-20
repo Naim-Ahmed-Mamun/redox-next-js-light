@@ -70,12 +70,12 @@ const AwardAreaTwo = () => {
                       data-cursor-text="View"
                       data-cursor-text-red
                     >
-                      {/* <Link href="/portfolio-details">
+                      <Link href="/portfolio-details">
                         <img
                           src={work.image}
                           alt={`image-${index}`}
                         />
-                      </Link> */}
+                      </Link>
                     </div>
                   </div>
                   <div className="content">
