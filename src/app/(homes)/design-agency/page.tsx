@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function HomeDesignAgencyPage() {
   return (
-    <>
+    <div className="design-agency">
       {/* custom cursor start */}
       <CustomCursor />
       {/* custom cursor end */}
@@ -71,6 +71,6 @@ export default function HomeDesignAgencyPage() {
         </DesignAgencyWrapper>
       </MainWrapper>
       {/* Main wrapper end */}
-    </>
+    </div>
   );
 }

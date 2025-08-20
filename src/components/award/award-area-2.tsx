@@ -33,7 +33,7 @@ const featuredWorks = [
   },
 ];
 
-const AwardAreaTwo: React.FC = () => {
+const AwardAreaTwo = () => {
   return (
     <section className="featured-work-area-2">
       <div className="container large">

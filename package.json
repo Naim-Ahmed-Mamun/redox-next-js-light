@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@types/imagesloaded": "^4.1.7",
     "bootstrap": "^5.3.7",
     "gsap": "^3.13.0",
+    "imagesloaded": "^5.0.0",
     "jquery": "^3.7.1",
     "next": "15.4.6",
     "react": "19.1.0",
