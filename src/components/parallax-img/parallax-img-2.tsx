@@ -9,7 +9,7 @@
 export default function ParallaxImgTwo() {
 
   return (
-    <div className="image-wrapper parallax-view fade-anim">
+    <div className="image-wrapper parallax-view">
       <img
         className="w-100"
         src="/assets/imgs/gallery/image-52.webp"
