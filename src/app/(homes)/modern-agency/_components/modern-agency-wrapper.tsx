@@ -1,5 +1,6 @@
 "use client";
 import gsap from "gsap";
+import imagesLoaded from "imagesloaded";
 import { useGSAP } from "@gsap/react";
 import { charAnimation, fadeAnimation } from "@/utils/title-anim";
 import { scaleAnim } from "@/utils/img-anim";
@@ -21,6 +22,6 @@ export default function ModernAgencyWrapper({ children }: Props) {
       scaleAnim();
     });
   }, {});
-  
+
   return children;
 }
