@@ -20,8 +20,8 @@ export default function DesignAgencyWrapper({ children }: Props) {
       clientPinAnimation();
       aboutThreeThumbAnimation();
       thumbAnimation();
-      rrBtnAnimation();
       serviceAnimationTwo();
+      rrBtnAnimation();
     }, 100);
     return () => clearTimeout(timer);
   }, {});
