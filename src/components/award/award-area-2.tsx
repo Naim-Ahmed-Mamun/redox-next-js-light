@@ -1,34 +1,35 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
-import gallery_img from "@/assets/imgs/gallery/image-47.webp";
-import gallery_img_2 from "@/assets/imgs/gallery/image-48.webp";
-import gallery_img_3 from "@/assets/imgs/gallery/image-49.webp";
-import gallery_img_4 from "@/assets/imgs/gallery/image-50.webp";
+// import gallery_img from "@/assets/imgs/gallery/image-47.webp";
+// import gallery_img_2 from "@/assets/imgs/gallery/image-48.webp";
+// import gallery_img_3 from "@/assets/imgs/gallery/image-49.webp";
+// import gallery_img_4 from "@/assets/imgs/gallery/image-50.webp";
 
 const featuredWorks = [
   {
     title: "Saudi Venture Capital",
     tag: "Branding — 2014",
-    image: gallery_img,
+    image: '/assets/imgs/gallery/image-47.webp',
     marginTop: false,
   },
   {
     title: "Saudi Venture Capital",
     tag: "Branding — 2014",
-    image: gallery_img_2,
+    image: '/assets/imgs/gallery/image-48.webp',
     marginTop: true,
   },
   {
     title: "Saudi Venture Capital",
     tag: "Branding — 2014",
-    image: gallery_img_3,
+    image: '/assets/imgs/gallery/image-49.webp',
     marginTop: false,
   },
   {
     title: "Saudi Venture Capital",
     tag: "Branding — 2014",
-    image: gallery_img_4,
+    image: '/assets/imgs/gallery/image-50.webp',
     marginTop: false,
   },
 ];
@@ -70,10 +71,9 @@ const AwardAreaTwo = () => {
                       data-cursor-text-red
                     >
                       <Link href="/portfolio-details">
-                        <Image
+                        <img
                           src={work.image}
                           alt={`image-${index}`}
-                          style={{height:"auto"}}
                         />
                       </Link>
                     </div>

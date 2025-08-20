@@ -3,7 +3,7 @@ import MainWrapper from "@/components/wrapper/main-wrapper";
 import DesignAgencyWrapper from "./_components/design-agency-wrapper";
 import HeaderFour from "@/layout/header/header-four";
 import HeroFour from "@/components/hero/hero-four";
-// import AwardAreaTwo from "@/components/award/award-area-2";
+import AwardAreaTwo from "@/components/award/award-area-2";
 import ServiceAreaFour from "@/components/services/service-area-4";
 import CapabilitiesArea from "@/components/capabilities/capabilities-area";
 import AboutThree from "@/components/about/about-three";
@@ -44,7 +44,7 @@ export default function HomeDesignAgencyPage() {
             {/* Hero area end */}
 
             {/* award area start */}
-            {/* <AwardAreaTwo /> */}
+            <AwardAreaTwo />
             {/* award area end */}
 
             {/* service area start */}
