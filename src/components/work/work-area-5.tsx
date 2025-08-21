@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 const portfolioData = [
@@ -108,18 +107,18 @@ export default function WorkAreaFive() {
                           </h3>
                           <span className="meta">{`${item.category}, ${item.year}`}</span>
                         </div>
-                        {/* {item.imageSrc && ( */}
+                      {item.imageSrc && ( 
                           <div className="image scale">
                             <Link href="/portfolio-details">
-                              <img
+                              <Image
                                 src={item.imageSrc}
                                 alt="image"
-                                // width={608}
-                                // height={708}
+                                width={608}
+                                height={708}
                               />
                             </Link>
                           </div>
-                        {/* )} */}
+                         )}
                       </div>
                     )}
                   </div>
