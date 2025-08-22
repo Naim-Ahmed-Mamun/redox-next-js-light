@@ -14,23 +14,26 @@ import client_20 from "@/assets/imgs/client/client-20.webp";
 import client_21 from "@/assets/imgs/client/client-21.webp";
 import client_22 from "@/assets/imgs/client/client-22.webp";
 
-const clients = [
-  { src: client_9, bgTheme: false },
-  { src: client_10, bgTheme: false },
-  { src: client_11, bgTheme: false },
-  { src: client_12, bgTheme: false },
-  { src: client_13, bgTheme: false },
-  { src: client_14, bgTheme: false },
-  { src: client_15, bgTheme: false },
-  { src: client_16, bgTheme: false },
-  { src: client_17, bgTheme: false },
-  { src: client_18, bgTheme: false },
-  { src: client_19, bgTheme: false },
-  { src: client_20, bgTheme: false },
-  { src: client_21, bgTheme: false },
-  { src: client_22, bgTheme: false },
-];
-export default function ClientCapsules() {
+type Props = {
+  isHome?: boolean;
+}
+export default function ClientCapsules({isHome}: Props) {
+  const clients = [
+    { src: client_9, bgTheme: isHome ? true : false },
+    { src: client_10, bgTheme: false },
+    { src: client_11, bgTheme: false },
+    { src: client_12, bgTheme: isHome ? true : false },
+    { src: client_13, bgTheme: false },
+    { src: client_14, bgTheme: false },
+    { src: client_15, bgTheme: isHome ? true : false },
+    { src: client_16, bgTheme: isHome ? true : false },
+    { src: client_17, bgTheme: false },
+    { src: client_18, bgTheme: isHome ? true : false },
+    { src: client_19, bgTheme: false },
+    { src: client_20, bgTheme: isHome ? true : false },
+    { src: client_21, bgTheme: false },
+    { src: client_22, bgTheme: false },
+  ];
   return (
     <div className="client-capsule-wrapper-box" data-t-throwable-scene="true">
       <div className="client-capsule-wrapper">

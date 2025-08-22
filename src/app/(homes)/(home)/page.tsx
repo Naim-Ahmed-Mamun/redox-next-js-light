@@ -65,7 +65,7 @@ export default function HomePage() {
             {/* Fun fact area end */}
 
             {/* Client area start */}
-            <ClientArea />
+            <ClientArea isHome={true} />
             {/* Client area end */}
 
             {/* Cta area start */}

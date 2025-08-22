@@ -1,8 +1,10 @@
 import React from "react";
 import ClientCapsules from "./client-capsules";
 
-
-const ClientArea = () => {
+type Props = {
+  isHome?: boolean;
+}
+const ClientArea = ({isHome=false }: Props) => {
 
   return (
     <section className="client-area">
@@ -24,7 +26,7 @@ const ClientArea = () => {
             </div>
           </div>
 
-          <ClientCapsules />
+          <ClientCapsules isHome={isHome} />
 
           <div className="lines-wrapper">
             {Array(8)

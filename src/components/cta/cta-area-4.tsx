@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function CtaAreaFour() {
   return (
@@ -20,6 +19,7 @@ export default function CtaAreaFour() {
                         alt="icon"
                         width={101}
                         height={101}
+                        style={{height:'auto'}}
                       />
                       <Image
                         className="second"
@@ -27,6 +27,7 @@ export default function CtaAreaFour() {
                         alt="icon"
                         width={101}
                         height={101}
+                        style={{height:'auto'}}
                       />
                     </span>{" "}
                     <br />

@@ -7,37 +7,37 @@ const workItems = [
     img: "/assets/imgs/project/image-19.webp",
     title: "Harash Denmark",
     date: "2010",
-    tag: "Branding"
+    tag: "Branding",
   },
   {
     img: "/assets/imgs/project/image-20.webp",
     title: "Saudi Lime Green",
     date: "2010",
-    tag: "Marketing"
+    tag: "Marketing",
   },
   {
     img: "/assets/imgs/project/image-21.webp",
     title: "Saudi Venture Capital",
     date: "2010",
-    tag: "Marketing"
+    tag: "Marketing",
   },
   {
     img: "/assets/imgs/project/image-22.webp",
     title: "Nilachal Network",
     date: "2010",
-    tag: "Marketing"
+    tag: "Marketing",
   },
   {
     img: "/assets/imgs/project/image-23.webp",
     title: "Royal Cash App",
     date: "2010",
-    tag: "Design"
+    tag: "Design",
   },
   {
     img: "/assets/imgs/project/image-24.webp",
     title: "Mashup Gradient",
     date: "2010",
-    tag: "Design"
+    tag: "Design",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function WorkAreaThree() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody rr_title_anim">
-                  We find the unique, easy solution for each creative project
+                  We find the unique, easy solution for each creative project{" "}
                   <span className="mb-14">
                     <Link href="/portfolio" className="rr-btn-group">
                       <span className="b">View all work</span>
@@ -68,9 +68,18 @@ export default function WorkAreaThree() {
               {workItems.map((item, idx) => (
                 <div className="work-box fade-anim" key={item.title + idx}>
                   <div className="thumb">
-                    <div className="image scale" data-cursor-text="View Project">
+                    <div
+                      className="image scale"
+                      data-cursor-text="View Project"
+                    >
                       <Link href="/portfolio-details">
-                        <Image src={item.img} alt="image" width={900} height={630} />
+                        <Image
+                          src={item.img}
+                          alt="image"
+                          width={900}
+                          height={630}
+                          style={{ height: "auto" }}
+                        />
                       </Link>
                     </div>
                   </div>

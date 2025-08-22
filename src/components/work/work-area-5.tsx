@@ -107,7 +107,7 @@ export default function WorkAreaFive() {
                           </h3>
                           <span className="meta">{`${item.category}, ${item.year}`}</span>
                         </div>
-                      {item.imageSrc && ( 
+                        {item.imageSrc && (
                           <div className="image scale">
                             <Link href="/portfolio-details">
                               <Image
@@ -115,10 +115,11 @@ export default function WorkAreaFive() {
                                 alt="image"
                                 width={608}
                                 height={708}
+                                style={{ height: 'auto' }}
                               />
                             </Link>
                           </div>
-                         )}
+                        )}
                       </div>
                     )}
                   </div>

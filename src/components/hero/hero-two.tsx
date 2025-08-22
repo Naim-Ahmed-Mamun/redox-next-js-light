@@ -50,7 +50,7 @@ export default function HeroTwo() {
                 data-offset="100"
                 data-direction="right"
               >
-                An
+                An{" "}
                 <span>award winning</span> creative agency, working based in
                 Germany
               </p>

@@ -12,7 +12,7 @@ export default function FunFactAreaTwo() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody rr_title_anim">
-                  Yes! we take some smart decisions for brands
+                  Yes! we take some smart decisions for brands{" "}
                   <span className="mb-14">
                     <Link href="/contact" className="rr-btn-group btn-whte">
                       <span className="b">Get started</span>
